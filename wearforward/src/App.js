@@ -1,4 +1,5 @@
 import './App.css';
+import Login from './login';
 
 import firebase from 'firebase/app'
 import 'firebase/firestore'
@@ -28,6 +29,7 @@ function App() {
       <header className="App-header">
         
       </header>
+      <Login/>
     </div>
   );
 }
