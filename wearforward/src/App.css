@@ -15,9 +15,27 @@ h3{
   font-size: 40px;
   font-weight: bold;
 }
-p{
+.sentence1{
   font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
   padding-bottom: 25px;
+}
+.wala{
+  padding-bottom: 25px;
+}
+.sentence2{
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.sentence3{
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 25px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 ul li{
   padding-top: 15px;
@@ -28,6 +46,8 @@ ul li{
     margin: auto;
     height: auto;
     padding-top: 10%;
+    padding-bottom: 50px;
+    
 }
 .box{
   height: 500px;
@@ -45,6 +65,24 @@ ul li{
   height: 30px;
   width: 300px;
   height: 40px;
+}
+.button{
+  background-color: #a6a6a6;
+  font-family: 'Open Sans', sans-serif;
+  font-size: large;
+  text-align: center;
+    margin: 5px 0;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    color: white;
+    width: 40%;
+    cursor: pointer;
+}
+
+.button:hover{
+  background-color: white;
+  color: black;
 }
 ::placeholder{
   font-family: 'Open Sans', sans-serif;
