@@ -20,10 +20,6 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-<<<<<<< HEAD
-//const analytics = firebase.analytics();
-=======
->>>>>>> 2be0827e41e499d8a3d4ebb55fcc5ddb668b013f
 
 function App() {
   const [user] = useAuthState(auth);
