@@ -1,5 +1,5 @@
 import React from 'react';
-import "./login.css";
+import "../styles/login.css";
 
 function Login(){
     return(
@@ -15,7 +15,10 @@ function Login(){
             <ul>
                 <li><input className="input" type= "text" name= "Email" placeholder = "Email"></input></li>
                 <li><input className="input" type= "password" name= "Password" placeholder = "Password"></input></li>
-                <li><a href="">Forgot Password</a></li>
+                <li><a className = "forgPass" href="">Forgot Password</a></li>
+                <li><p className ="loginwith">Login with:</p></li>
+                <li><a href=""><img className = "fbIcon" src={require('../assets/fbIcon.png').default}/></a></li>
+                <li><a href=""><img className = "gmIcon" src={require('../assets/gmailIcon.png').default}/></a></li>
             </ul>
             </div>
             <div>
@@ -28,7 +31,8 @@ ante, dapibus gravida diam eget, cursus porta nibh. rcu. Phasellus
 porttitor, mauris vitae consequat consequat, mauris urna feugiat lorem,
 et lacinia nunc dui vitae purus.</p>
             <p className="sentence3">If you have any concerns, please email us at (wear forward email).</p>
-            <button className="button">CREATE AN ACCOUNT</button>
+            <a className = "accountCR" href ="">CREATE AN ACCOUNT</a>
+
             </div>
         </div>
         </body>

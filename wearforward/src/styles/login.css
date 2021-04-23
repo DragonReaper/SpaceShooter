@@ -36,6 +36,7 @@
     padding-bottom: 25px;
     margin-left: 200px;
     margin-right: 200px;
+    margin-bottom: 30px;
   }
   ul li{
     padding-top: 15px;
@@ -79,8 +80,11 @@
       width: 40%;
       cursor: pointer;
   }
-  
-  .button:hover{
+  .loginwith{
+    font-family: 'Open Sans', sans-serif;
+    font-size: small;
+  }
+  .accountCR:hover{
     background-color: white;
     color: black;
   }
@@ -88,7 +92,45 @@
     font-family: 'Open Sans', sans-serif;
     color: white;
   }
-  a{
+  .forgPass{
     font-family: 'Open Sans', sans-serif;
     color: black;
+  }
+  .accountCR{
+    background-color: #a6a6a6;
+    font-family: 'Open Sans', sans-serif;
+    font-size: large;
+    text-align: center;
+      margin: 5px 0;
+      padding: 10px;
+      padding-left: 70px;
+      padding-right: 70px;
+      margin-top: 20px;
+      border: none;
+      color: white;
+      width: 40%;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  
+  .fbIcon{
+    float: left;
+    width: 25%;
+    padding: 3px;
+    object-position: center top;  
+    margin-left: 410px;
+    position: relative;
+    height: 45px;
+    width: auto;
+  }
+  .gmIcon{
+    float: left;
+    width: 25%;
+    object-position: center top;  
+    position: relative;
+    padding: 3px;
+    margin-left: 70px;
+    margin-top: -15px;
+    height: 45px;
+    width: auto;
   }
