@@ -1,6 +1,6 @@
 extends Area2D
 
-
+var plBullet := preload("res://Bullet/Bullet.tscn")
 onready var sprite:= $Sprite
 
 var speed: float=100
@@ -13,6 +13,12 @@ func _process(delta):
 		sprite.frame=2
 	else:
 		sprite.frame=1
+		
+	# Check if bullets are shot
+	if Input.is_action_pressed("shoot"):
+		var bullet= plBullet.instance()
+		bullet.position = position
+		get_tree().current_scene.add_child(bullet)
 	
 
 	
