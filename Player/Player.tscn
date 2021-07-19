@@ -4,11 +4,12 @@
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 58.361
+radius = 41.0188
 
 [node name="Player" type="Area2D"]
 scale = Vector2( 0.606574, 0.614915 )
 script = ExtResource( 2 )
+fireDelay = 0.5
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 5.11895, 0.363365 )
@@ -19,3 +20,15 @@ frame = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3.85724, -1.59774 )
 shape = SubResource( 1 )
+
+[node name="FiringPositions" type="Node2D" parent="."]
+position = Vector2( 2.29543, 5.88495 )
+
+[node name="LeftGun" type="Node2D" parent="FiringPositions"]
+position = Vector2( -41.4002, -16.8736 )
+
+[node name="RightGun" type="Node2D" parent="FiringPositions"]
+position = Vector2( 50.5764, -13.3243 )
+
+[node name="FireDelayTimer" type="Timer" parent="."]
+one_shot = true
