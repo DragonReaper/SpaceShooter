@@ -6,6 +6,7 @@ export var maxSpeed: float= 20
 export var minRotationRate: float=-20
 export var maxRotaionRate: float= 20
 
+var pMeteorEffect := preload("res://Meteor/MeteorEffect.tscn")
 export var life: int = 20
 
 var speed: float= 0.0
@@ -31,6 +32,9 @@ func _on_VisibilityNotifier2D_screen_exited():
 func damage(amount: int):
 	life -= amount
 	if life <=0:
+		var effect := pMeteorEffect.instance()
+		effect.position= position
+		get_parent().add_child(effect)
 		queue_free()
 	
 func _on_Meteor_area_entered(area):
