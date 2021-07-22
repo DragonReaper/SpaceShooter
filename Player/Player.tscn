@@ -9,6 +9,7 @@ radius = 41.0188
 
 [node name="Player" type="Area2D"]
 scale = Vector2( 0.606574, 0.614915 )
+z_index = 100
 script = ExtResource( 2 )
 fireDelay = 0.25
 
