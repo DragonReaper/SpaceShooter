@@ -20,7 +20,7 @@ hframes = 3
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3.85724, -1.59774 )
+position = Vector2( 3.85724, -1.356 )
 shape = SubResource( 1 )
 
 [node name="FiringPositions" type="Node2D" parent="."]
