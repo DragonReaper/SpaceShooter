@@ -4,7 +4,7 @@
 [ext_resource path="res://Enemy/Enemy.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 46.288
+radius = 33.9862
 
 [node name="Enemy" type="Area2D" groups=[
 "Damageable",
@@ -21,4 +21,6 @@ shape = SubResource( 1 )
 position = Vector2( 0.624999, 0.874998 )
 scale = Vector2( 4.6625, 4.6875 )
 
+[connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_Enemy_area_exited"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

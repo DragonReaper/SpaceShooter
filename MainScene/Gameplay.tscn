@@ -5,7 +5,7 @@
 [ext_resource path="res://SpaceShooter/SpaceShooter_Assets/starBig.png" type="Texture" id=3]
 [ext_resource path="res://Meteor/Meteor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemy/FastEnemy.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node"]
 
@@ -42,6 +42,5 @@ position = Vector2( 228.881, 234.759 )
 [node name="Meteor" parent="." instance=ExtResource( 4 )]
 position = Vector2( 351.786, 53.3936 )
 
-[node name="Enemy" parent="." instance=ExtResource( 6 )]
-position = Vector2( 114.32, 57.4246 )
-verticalSpeed = 20.0
+[node name="FastEnemy" parent="." instance=ExtResource( 7 )]
+position = Vector2( 106.244, 50.8709 )
