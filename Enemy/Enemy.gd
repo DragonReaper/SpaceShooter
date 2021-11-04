@@ -1,6 +1,10 @@
 extends Area2D
 class_name Enemy
 
+
+onready var firingPositions := $FiringPositions
+var plBullet := preload("res://Bullet/EnemyBullet.tscn")
+
 export var verticalSpeed := 10.0
 export var health : int = 5
 var playerInArea: Player= null
@@ -29,3 +33,10 @@ func _on_Enemy_area_entered(area):
 func _on_Enemy_area_exited(area):
 	if area is Player:
 		playerInArea = null
+
+
+func fire():
+	for child in firingPositions.get_children():
+			var bullet := plBullet.instance()
+			bullet.global_position = child.global_position
+			get_tree().current_scene.add_child(bullet)

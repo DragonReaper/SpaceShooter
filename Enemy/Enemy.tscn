@@ -21,6 +21,8 @@ shape = SubResource( 1 )
 position = Vector2( 0.624999, 0.874998 )
 scale = Vector2( 4.6625, 4.6875 )
 
+[node name="FiringPositions" type="Node2D" parent="."]
+
 [connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_Enemy_area_exited"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
