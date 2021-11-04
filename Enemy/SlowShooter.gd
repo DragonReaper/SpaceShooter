@@ -1,5 +1,5 @@
 extends Enemy
-
+class_name SlowShooter
 
 onready var fireTimer := $FireTimer
 

@@ -5,7 +5,7 @@
 [ext_resource path="res://SpaceShooter/SpaceShooter_Assets/enemyShip.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 36.75, 20.75 )
+extents = Vector2( 39, 33 )
 
 [node name="SlowShooter" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
