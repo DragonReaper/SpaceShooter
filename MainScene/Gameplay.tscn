@@ -1,13 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://SpaceShooter/SpaceShooter_Assets/backgroundColor.png" type="Texture" id=2]
 [ext_resource path="res://SpaceShooter/SpaceShooter_Assets/starBig.png" type="Texture" id=3]
-[ext_resource path="res://Meteor/Meteor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MainScene/Spawner.gd" type="Script" id=4]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Enemy/SlowShooter.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Enemy/FastEnemy.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Enemy/BouncerEnemy.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node"]
 
@@ -41,14 +38,11 @@ scale_amount_random = 0.16
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 228.881, 234.759 )
 
-[node name="Meteor" parent="." instance=ExtResource( 4 )]
-position = Vector2( 351.786, 53.3936 )
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2( 239.652, -68.5992 )
+script = ExtResource( 4 )
 
-[node name="FastEnemy" parent="." instance=ExtResource( 7 )]
-position = Vector2( 106.244, 50.8709 )
+[node name="SpawnTimer" type="Timer" parent="Spawner"]
+one_shot = true
 
-[node name="SlowShooter" parent="." instance=ExtResource( 6 )]
-position = Vector2( 387.179, 151.849 )
-
-[node name="Bouncer" parent="." instance=ExtResource( 8 )]
-position = Vector2( 0.488129, 54.5829 )
+[connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_SpawnTimer_timeout"]

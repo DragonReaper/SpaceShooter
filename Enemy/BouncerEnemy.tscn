@@ -6,8 +6,8 @@
 
 [node name="Bouncer" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-verticalSpeed = 10.0
-health = 10
+verticalSpeed = 30.0
+health = 20
 fireRate = 2.0
 
 [node name="Sprite" parent="." index="0"]
