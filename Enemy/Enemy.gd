@@ -4,6 +4,7 @@ class_name Enemy
 
 onready var firingPositions := $FiringPositions
 var plBullet := preload("res://Bullet/EnemyBullet.tscn")
+var plEnemyExplosion := preload("res://Enemy/EnemyExplosion.tscn")
 
 export var verticalSpeed := 10.0
 export var health : int = 5
@@ -19,6 +20,9 @@ func _process(delta):
 func damage(amount : int):
 	health -= amount
 	if health<= 0:
+		var effect :=plEnemyExplosion.instance()
+		effect.global_position = global_position
+		get_tree().current_scene.add_child(effect)
 		queue_free()
 
 
