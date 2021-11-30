@@ -61,6 +61,8 @@ func damage(amount: int):
 	shieldSprite.visible= true
 	life -=amount
 	Signals.emit_signal("on_player_life_changed", life)
+	var cam = get_tree().current_scene.find_node("Cam", true, false)
+	cam.shake(10)
 	
 	if life <=0:
 		print("Player Died")

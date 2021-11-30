@@ -30,11 +30,15 @@ func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 
 func damage(amount: int):
+	if life<=0:
+		return
+	
 	life -= amount
 	if life <=0:
 		var effect := pMeteorEffect.instance()
 		effect.position= position
 		get_parent().add_child(effect)
+		Signals.emit_signal("on_score_increment",2)
 		queue_free()
 	
 func _on_Meteor_area_entered(area):
